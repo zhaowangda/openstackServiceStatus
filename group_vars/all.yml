@@ -1,0 +1,31 @@
+---
+global_tasks_switch:
+  nic: yes
+  hostname: yes
+  selinux: yes
+  ssh_key: yes
+  partition: yes
+  repo: yes
+  name: globalswitch
+
+clusterInfo:
+  CUVersion: NeoCU8.0       # cu7.0 or neoCU
+  projectName: kuiweitest            # exm: wuxi ditie
+  HAType: yes                    #  yes or no
+  openstackVersion: Mitaka        # Juno or Mitaka
+  projectTime: "2017-06-23 00:00:00"      # implamentation time
+  HAVip: 172.16.60.100
+
+
+
+systemInfo:
+  systemVersion: Centos7.2.1511
+
+databaseInfo:
+  mysqlHost: "{{ clusterInfo.HAVip }}"
+  mysqlUser: root
+  mysqlPass: passw0rd
+  mysqlPort: 3306
+
+
+

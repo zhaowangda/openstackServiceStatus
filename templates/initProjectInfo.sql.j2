@@ -1,0 +1,64 @@
+#mysqlObj="mysql -h {{ clusterInfo.HAVip }} -uhiiservice -phiiservice -e "
+
+
+#---------------------------------------
+#update Cluster Info
+
+mysql -h {{ clusterInfo.HAVip }} -uhiiservice -phiiservice -e   " use openstackService; update clusterinfo set name='{{ clusterInfo.projectName }}',haType='{{ clusterInfo.HAType }}',openstackVersion='{{ clusterInfo.openstackVersion }}',cuVersion='{{ clusterInfo.CUVersion }}',updateTime='{{ clusterInfo.projectTime }}'  where id='1';"
+#--------------------------------------
+#update hostSchema
+
+mysql -h {{ clusterInfo.HAVip }} -uhiiservice -phiiservice -e   " use openstackService; delete from hostSchema;"
+#add controller hosts
+{% for host in groups.controller %}
+mysql -h {{ clusterInfo.HAVip }} -uhiiservice -phiiservice -e   " use openstackService; insert into hostSchema (hostIP,hostName,role,allRoles,status,os) values('{{ hostvars[host].ansible_host }}','{{ host }}','controller','{{ hostvars[host].allRoles }}','Running','{{ systemInfo.systemVersion }}')"
+
+{% endfor %}
+
+
+
+#add network hosts
+{% for host in groups.network %}
+#{{ host }}  {{ hostvars[host].ansible_host }}  network
+mysql -h {{ clusterInfo.HAVip }} -uhiiservice -phiiservice -e   " use openstackService; insert into hostSchema (hostIP,hostName,role,allRoles,status,os) values('{{ hostvars[host].ansible_host }}','{{ host }}','network','{{ hostvars[host].allRoles }}','Running','{{ systemInfo.systemVersion }}')"
+{% endfor %}
+
+
+#add compute hosts
+{% for host in groups.compute %}
+mysql -h {{ clusterInfo.HAVip }} -uhiiservice -phiiservice -e   " use openstackService; insert into hostSchema (hostIP,hostName,role,allRoles,status,os) values('{{ hostvars[host].ansible_host }}','{{ host }}','compute','{{ hostvars[host].allRoles }}','Running','{{ systemInfo.systemVersion }}')"
+{% endfor %}
+
+#add cu hosts
+{% for host in groups.cu %}
+mysql -h {{ clusterInfo.HAVip }} -uhiiservice -phiiservice -e   " use openstackService; insert into hostSchema (hostIP,hostName,role,allRoles,status,os) values('{{ hostvars[host].ansible_host }}','{{ host }}','cu','{{ hostvars[host].allRoles }}','Running','{{ systemInfo.systemVersion }}')"
+{% endfor %}
+
+#add neoCU hosts
+{% for host in groups.neoCU %}
+mysql -h {{ clusterInfo.HAVip }} -uhiiservice -phiiservice -e   " use openstackService; insert into hostSchema (hostIP,hostName,role,allRoles,status,os) values('{{ hostvars[host].ansible_host }}','{{ host }}','neoCU','{{ hostvars[host].allRoles }}','Running','{{ systemInfo.systemVersion }}')"
+{% endfor %}
+
+#add stackwatch hosts
+{% for host in groups.stackwatch %}
+mysql -h {{ clusterInfo.HAVip }} -uhiiservice -phiiservice -e   " use openstackService; insert into hostSchema (hostIP,hostName,role,allRoles,status,os) values('{{ hostvars[host].ansible_host }}','{{ host }}','stackwatch','{{ hostvars[host].allRoles }}','Running','{{ systemInfo.systemVersion }}')"
+{% endfor %}
+
+
+#--------------------------------------------------------------
+# init cuservice service
+
+{%- if groups.cu  -%} 
+#
+mysql -h {{ clusterInfo.HAVip }} -uhiiservice -phiiservice -e  "use openstackService; delete  from serviceStatus; INSERT into serviceStatus (hostname,hostip,serviceName,roleName,haservice,command,serviceType) select hostName,hostip,serviceName,roleName,haservice,command,serviceType from hostSchema  join CUServiceTemplate on hostSchema.role = CUServiceTemplate.roleName ;"
+{% endif %}
+
+ 
+#init neoCU service
+ 
+{%- if groups.neoCU -%}
+#
+mysql -h {{ clusterInfo.HAVip }} -uhiiservice -phiiservice -e  "use openstackService; delete  from serviceStatus; INSERT into serviceStatus (hostname,hostip,serviceName,roleName,haservice,command,serviceType) select hostName,hostip,serviceName,roleName,haservice,command,serviceType from hostSchema  join NeoCUServiceTemplate on hostSchema.role = NeoCUServiceTemplate.roleName ;"
+{% endif %}
+
+

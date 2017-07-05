@@ -1,0 +1,52 @@
+controller01 ansible_host=172.16.60.15 ansible_ssh_pass=000000 allRoles='controller,network,Neocu,stackwatch'
+
+controller02 ansible_host=172.16.60.16 ansible_ssh_pass=000000 allRoles='controller,network,Neocu'
+
+controller03 ansible_host=172.16.60.17 ansible_ssh_pass=000000 allRoles='controller,network,Neocu'
+
+
+controllerVip ansible_host=172.16.60.100 ansible_ssh_pass=000000 allRoles='controller,network,Neocu'
+
+
+compute01 ansible_host=172.16.60.18 ansible_ssh_user=root ansible_ssh_pass=000000 allRoles='compute'
+compute02 ansible_host=172.16.60.19 ansible_ssh_user=root ansible_ssh_pass=000000 allRoles='compute'
+
+
+
+#controller01	ansible_host=172.16.41.115	ansible_ssh_pass=huayun2016	allRoles='controller,network,compute,cu'
+#controller02    ansible_host=192.168.1.2        ansible_ssh_pass=huayun2016   allRoles='controller,network,compute,cu'
+#controller03    ansible_host=192.168.1.3        ansible_ssh_pass=huayun2016   allRoles='controller,network,compute,cu'
+#network01    ansible_host=172.16.41.120        ansible_ssh_pass=huayun2016   allRoles='network'
+#network02    ansible_host=192.168.1.5        ansible_ssh_pass=huayun2016   allRoles='network'
+#compute01    ansible_host=172.16.41.116        ansible_ssh_pass=huayun2016   allRoles='compute'
+#compute02    ansible_host=172.16.41.121        ansible_ssh_pass=huayun2016   allRoles='compute'
+#--------------------------------
+[controllerVip]
+controllerVip
+#--------------------------------
+[controller]
+controller01
+controller02
+controller03
+#--------------------------------
+[compute]
+compute01
+compute02
+#--------------------------------
+[network]
+controller01
+controller02
+controller03
+
+#--------------------------------
+[cu]
+#controller01
+#--------------------------------
+[neoCU]
+controller01
+controller02
+controller03
+#--------------------------------
+#
+[stackwatch]
+controller01

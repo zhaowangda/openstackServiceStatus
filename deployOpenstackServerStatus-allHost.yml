@@ -1,0 +1,20 @@
+---
+
+- name: install openstackServiceStatus
+  any_errors_fatal: true
+  hosts:
+    - all
+
+  tasks:
+    - name: installed httpd
+      yum: name=httpd state=present
+
+    - name: update http conf
+      command: sed -i s/'#AddHandler cgi-script .cgi'/'AddHandler cgi-script .cgi .py'/g  /etc/httpd/conf/httpd.conf 
+
+    - name: restart httpd service
+      service: name=httpd state=restarted
+
+    - name: update serviceAPI programe
+      copy: src=/ansibleProject/ansible-hii-serviceStatus/file/serviceStatusApi.py dest=/var/www/cgi-bin/ mode=777
+

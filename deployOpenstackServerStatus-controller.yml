@@ -1,0 +1,80 @@
+---
+
+
+- name: update file to controller group
+  any_errors_fatal: true
+  hosts:
+    - controller
+
+  tasks:
+    - name: update serviceAPI programe
+      copy: src=/ansibleProject/ansible-hii-serviceStatus/file/ dest=/var/www/cgi-bin/ mode=777
+
+    - name: sync database config to controller
+      template: src=/ansibleProject/ansible-hii-serviceStatus/templates/database.ini.j2 dest=/var/www/cgi-bin/database.ini mode=0777
+
+    - name: sync database config to controller
+      template: src=/ansibleProject/ansible-hii-serviceStatus/templates/initProjectInfo.sql.j2 dest=/var/www/cgi-bin/initProjectInfo.sql.sh mode=0777
+
+    - name: sync serviceStatus.py
+      template: src=/ansibleProject/ansible-hii-serviceStatus/templates/serviceStatus.py.j2 dest=/var/www/cgi-bin/serviceStatus.py mode=0777
+
+#---------------------------------------------------------------
+#create service status database on controllerVip Host
+- name: install openstackServiceStatus
+  any_errors_fatal: true
+  hosts:
+    - controllerVip
+
+  tasks:
+    - name: create datebase
+      mysql_db:
+        name: openstackService
+        state: present
+        encoding: utf8
+        login_port: "{{ databaseInfo.mysqlPort }}"
+        login_user: "{{ databaseInfo.mysqlUser }}"
+        login_password: "{{ databaseInfo.mysqlPass }}"
+#        target: /var/www/cgi-bin/openstackService.sql
+
+
+
+
+
+
+
+    - name: init datebase structure
+      mysql_db:
+        name: openstackService
+        state: import
+        login_port: "{{ databaseInfo.mysqlPort }}"
+        login_user: "{{ databaseInfo.mysqlUser }}"
+        login_password: "{{ databaseInfo.mysqlPass }}"
+        target: /var/www/cgi-bin/openstackService.sql
+
+
+    - name: setup mysql user hiiservice
+      mysql_user:
+        name: hiiservice
+        state: present
+        password: hiiservice
+        priv: openstackService.*:ALL,GRANT
+        host: "{{ item }}"
+#        login_host: "{{ clusterInfo.HAVip }}"
+        login_port: "{{ databaseInfo.mysqlPort }}"
+        login_user: "{{ databaseInfo.mysqlUser }}"
+        login_password: "{{ databaseInfo.mysqlPass }}"
+      with_items:
+        - "localhost"
+        - "%"
+#
+#--------------------------------------------------------------
+    - name: init service plateform
+      shell: /var/www/cgi-bin/initProjectInfo.sql.sh
+
+
+    - name: update service status
+      shell: /var/www/cgi-bin/plan.py
+        
+
+
