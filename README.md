@@ -1,5 +1,6 @@
 #---------------------------------------------------
 #hii service 安装文档
+#建议使用 sublime3打开
 #===================================================
 
 1、在ansible(推荐版本：2.2.1)以上版本服务器上，创建安装目录
@@ -13,7 +14,7 @@ mkdir -p /ansibleProject/ansible-hii-serviceStatus
 		3.1主机特殊参数解释
 		#controller01   ansible_host=172.16.41.115      ansible_ssh_pass=huayun2016  allRoles='controller,network,compute,cu'
 		参数解释：
-		allRoles： 节点实际安装的角色，可选参数为：controller，network，compute，cu，stackwatch
+		allRoles： 节点实际安装的角色，可选为（只是做说明）：controller，network，compute，cu，stackwatch
 
 		3.2主机组
 		[controllerVip] --> HA环境controllerVip 节点，非HA填写controller节点
@@ -67,3 +68,5 @@ http://controllerIP/cgi-bin/serviceStatusV2.py
 1、web方式手动查看客户端服务状态是否正常如： httpd服务
 http://clientIP/cgi-bin/serviceStatusApi.py?serviceName=httpd
 
+2、最新版克隆地址
+https://github.com/zhaowangda/openstackServiceStatus.git
