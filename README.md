@@ -32,7 +32,11 @@ mkdir -p /ansibleProject/ansible-hii-serviceStatus
 clusterInfo:
   CUVersion: NeoCU8.0       							# cu7.0 or neoCU
   projectName: zwdPOC01            						# exm: wuxi ditie
+<<<<<<< HEAD
   HAType: no
+=======
+  HAType: no 											# 是否是HA集群
+>>>>>>> eb0869de830fb200e7b8d4e699fc61d10eea5d4b
   openstackVersion: Mitaka        						# openstack版本 Juno or Mitaka
   projectTime: "2017-04-20 00:00:00"      				# project Time：implamentation time
   HAVip: 172.16.41.115 									# Ha环境 controllerVip
@@ -69,4 +73,8 @@ http://controllerIP/cgi-bin/serviceStatusV2.py
 http://clientIP/cgi-bin/serviceStatusApi.py?serviceName=httpd
 
 2、最新版克隆地址
+<<<<<<< HEAD
 https://github.com/zhaowangda/openstackServiceStatus.git
+=======
+https://github.com/zhaowangda/openstackServiceStatus.git
+>>>>>>> eb0869de830fb200e7b8d4e699fc61d10eea5d4b
