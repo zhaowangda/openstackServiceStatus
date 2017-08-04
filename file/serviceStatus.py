@@ -75,7 +75,7 @@ for record in records:
 	print "<td>"+ record[3] +"</td>"
 	print "<td>"+ record[4] +"</td>"
 	print "<td>"+ record[5] +"</td>"
-	print "<td><a href='http://192.168.35.66/cgi-bin/plan.py' target='_blank' >更新状态</a></td>"
+	print "<td><a href='http://10.0.20.1/cgi-bin/plan.py' target='_blank' >更新状态</a></td>"
 	print '<td><a target="_blank" href="'+ record[6] +'">Open</a></td>"'
 	print "</tr>"
 
@@ -165,6 +165,7 @@ print           " <th bgcolor=#E2EAF8>高可用</th>"
 print           " <th bgcolor=#E2EAF8>进程ID</th>"
 print           " <th bgcolor=#E2EAF8>状态</th>"
 print           " <th bgcolor=#E2EAF8>检测时间</th>"
+print           " <th bgcolor=#E2EAF8>软件包版本</th>"
 #print           " <th bgcolor=#E2EAF8>异常建议</th>"
 print   "</tr>"
 #--------------------------------------------------------------
@@ -189,6 +190,7 @@ for record in records:
         else :
                 print "<td  bgcolor=#Ff9900 >"+ record[5] +"</td>"
         print "<td>"+ record[6] +"</td>"
+	print "<td>"+ record[11] +"</td>"
         #print "<td>"
         #print   record[7] 
         #print   "</td>"

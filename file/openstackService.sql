@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 172.16.60.16
+Source Server         : 10.0.20.200
 Source Server Version : 50505
-Source Host           : 172.16.60.16:3306
+Source Host           : 10.0.20.200:3306
 Source Database       : openstackService
 
 Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2017-06-23 15:49:08
+Date: 2017-08-04 19:33:11
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -35,7 +35,7 @@ CREATE TABLE `clusterinfo` (
 -- ----------------------------
 -- Records of clusterinfo
 -- ----------------------------
-INSERT INTO `clusterinfo` VALUES ('1', 'kuiweitest', 'True', 'Mitaka', 'NeoCU8.0', '10.10.10.10', 'webconsole', 'http://172.16.25.10/', '2017-06-23 00:00:00');
+INSERT INTO `clusterinfo` VALUES ('1', 'ShangHai DC', 'True', 'Mitaka', 'NeoCU2.2.1', '10.10.10.10', 'webconsole', 'http://172.16.25.10/', '2017-07-28 00:00:00');
 
 -- ----------------------------
 -- Table structure for `CUServiceTemplate`
@@ -126,18 +126,18 @@ CREATE TABLE `hostSchema` (
 -- ----------------------------
 -- Records of hostSchema
 -- ----------------------------
-INSERT INTO `hostSchema` VALUES ('172.16.60.15', 'controller01', 'controller', 'controller,network,Neocu,stackwatch', 'Running', 'Centos7.2.1511', '', null, ' 15:46:07 up 1 day,  4:32,  6 users,  load average: 2.06, 2.29, 2.41', null, null, '');
-INSERT INTO `hostSchema` VALUES ('172.16.60.15', 'controller01', 'neoCU', 'controller,network,Neocu,stackwatch', 'Running', 'Centos7.2.1511', '', null, ' 15:46:07 up 1 day,  4:32,  6 users,  load average: 2.06, 2.29, 2.41', null, null, '');
-INSERT INTO `hostSchema` VALUES ('172.16.60.15', 'controller01', 'network', 'controller,network,Neocu,stackwatch', 'Running', 'Centos7.2.1511', '', null, ' 15:46:07 up 1 day,  4:32,  6 users,  load average: 2.06, 2.29, 2.41', null, null, '');
-INSERT INTO `hostSchema` VALUES ('172.16.60.15', 'controller01', 'stackwatch', 'controller,network,Neocu,stackwatch', 'Running', 'Centos7.2.1511', '', null, ' 15:46:07 up 1 day,  4:32,  6 users,  load average: 2.06, 2.29, 2.41', null, null, '');
-INSERT INTO `hostSchema` VALUES ('172.16.60.16', 'controller02', 'controller', 'controller,network,Neocu', 'Running', 'Centos7.2.1511', '', null, ' 15:46:07 up 2 days, 22:48,  1 user,  load average: 3.30, 2.86, 2.54', null, null, '');
-INSERT INTO `hostSchema` VALUES ('172.16.60.16', 'controller02', 'neoCU', 'controller,network,Neocu', 'Running', 'Centos7.2.1511', '', null, ' 15:46:07 up 2 days, 22:48,  1 user,  load average: 3.30, 2.86, 2.54', null, null, '');
-INSERT INTO `hostSchema` VALUES ('172.16.60.16', 'controller02', 'network', 'controller,network,Neocu', 'Running', 'Centos7.2.1511', '', null, ' 15:46:07 up 2 days, 22:48,  1 user,  load average: 3.30, 2.86, 2.54', null, null, '');
-INSERT INTO `hostSchema` VALUES ('172.16.60.17', 'controller03', 'controller', 'controller,network,Neocu', 'Running', 'Centos7.2.1511', '', null, ' 15:46:07 up 2 days, 22:48,  1 user,  load average: 2.20, 2.19, 2.30', null, null, '');
-INSERT INTO `hostSchema` VALUES ('172.16.60.17', 'controller03', 'neoCU', 'controller,network,Neocu', 'Running', 'Centos7.2.1511', '', null, ' 15:46:07 up 2 days, 22:48,  1 user,  load average: 2.20, 2.19, 2.30', null, null, '');
-INSERT INTO `hostSchema` VALUES ('172.16.60.17', 'controller03', 'network', 'controller,network,Neocu', 'Running', 'Centos7.2.1511', '', null, ' 15:46:07 up 2 days, 22:48,  1 user,  load average: 2.20, 2.19, 2.30', null, null, '');
-INSERT INTO `hostSchema` VALUES ('172.16.60.18', 'compute01', 'compute', 'compute', 'Running', 'Centos7.2.1511', '', null, ' 15:46:07 up 2 days, 22:53,  3 users,  load average: 0.10, 0.08, 0.06', null, null, '');
-INSERT INTO `hostSchema` VALUES ('172.16.60.19', 'compute02', 'compute', 'compute', 'Running', 'Centos7.2.1511', '', null, ' 15:46:07 up 22:31,  1 user,  load average: 0.04, 0.04, 0.05', null, null, '');
+INSERT INTO `hostSchema` VALUES ('10.0.20.1', 'controller01', 'controller', 'controller,network,Neocu,stackwatch', 'Running', 'Centos7.2.1511', '', null, ' 19:26:43 up 6 days,  2:15,  3 users,  load average: 1.54, 1.71, 1.57', null, null, '');
+INSERT INTO `hostSchema` VALUES ('10.0.20.1', 'controller01', 'neoCU', 'controller,network,Neocu,stackwatch', 'Running', 'Centos7.2.1511', '', null, ' 19:26:43 up 6 days,  2:15,  3 users,  load average: 1.54, 1.71, 1.57', null, null, '');
+INSERT INTO `hostSchema` VALUES ('10.0.20.1', 'controller01', 'network', 'controller,network,Neocu,stackwatch', 'Running', 'Centos7.2.1511', '', null, ' 19:26:43 up 6 days,  2:15,  3 users,  load average: 1.54, 1.71, 1.57', null, null, '');
+INSERT INTO `hostSchema` VALUES ('10.0.20.1', 'controller01', 'stackwatch', 'controller,network,Neocu,stackwatch', 'Running', 'Centos7.2.1511', '', null, ' 19:26:43 up 6 days,  2:15,  3 users,  load average: 1.54, 1.71, 1.57', null, null, '');
+INSERT INTO `hostSchema` VALUES ('10.0.20.11', 'compute01', 'compute', 'compute', 'Running', 'Centos7.2.1511', '', null, ' 19:26:43 up 3 days,  1:39,  1 user,  load average: 0.00, 0.04, 0.12', null, null, '');
+INSERT INTO `hostSchema` VALUES ('10.0.20.12', 'compute02', 'compute', 'compute', 'Running', 'Centos7.2.1511', '', null, ' 19:26:43 up 6 days,  2:17,  0 users,  load average: 0.66, 0.65, 0.68', null, null, '');
+INSERT INTO `hostSchema` VALUES ('10.0.20.2', 'controller02', 'controller', 'controller,network,Neocu', 'Running', 'Centos7.2.1511', '', null, ' 19:26:43 up 6 days,  2:15,  0 users,  load average: 1.10, 1.43, 1.43', null, null, '');
+INSERT INTO `hostSchema` VALUES ('10.0.20.2', 'controller02', 'neoCU', 'controller,network,Neocu', 'Running', 'Centos7.2.1511', '', null, ' 19:26:43 up 6 days,  2:15,  0 users,  load average: 1.10, 1.43, 1.43', null, null, '');
+INSERT INTO `hostSchema` VALUES ('10.0.20.2', 'controller02', 'network', 'controller,network,Neocu', 'Running', 'Centos7.2.1511', '', null, ' 19:26:43 up 6 days,  2:15,  0 users,  load average: 1.10, 1.43, 1.43', null, null, '');
+INSERT INTO `hostSchema` VALUES ('10.0.20.3', 'controller03', 'controller', 'controller,network,Neocu', 'Running', 'Centos7.2.1511', '', null, ' 19:26:44 up 6 days,  2:15,  0 users,  load average: 1.29, 1.21, 1.25', null, null, '');
+INSERT INTO `hostSchema` VALUES ('10.0.20.3', 'controller03', 'neoCU', 'controller,network,Neocu', 'Running', 'Centos7.2.1511', '', null, ' 19:26:44 up 6 days,  2:15,  0 users,  load average: 1.29, 1.21, 1.25', null, null, '');
+INSERT INTO `hostSchema` VALUES ('10.0.20.3', 'controller03', 'network', 'controller,network,Neocu', 'Running', 'Centos7.2.1511', '', null, ' 19:26:44 up 6 days,  2:15,  0 users,  load average: 1.29, 1.21, 1.25', null, null, '');
 
 -- ----------------------------
 -- Table structure for `NeoCUServiceTemplate`
@@ -233,153 +233,154 @@ CREATE TABLE `serviceStatus` (
   `abnormalAdvice` varchar(200) DEFAULT NULL,
   `command` varchar(200) DEFAULT NULL,
   `serviceType` varchar(200) NOT NULL DEFAULT 'normal',
+  `packageVersion` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`hostName`,`hostIP`,`serviceName`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of serviceStatus
 -- ----------------------------
-INSERT INTO `serviceStatus` VALUES ('compute01', '172.16.60.18', 'libvirtd', 'compute', 'no', 'Running', '2017-06-23 15:46:08', '25000', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('compute01', '172.16.60.18', 'monitor_host_usb', 'compute', 'no', 'Running', '2017-06-23 15:46:08', '25109', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('compute01', '172.16.60.18', 'netcf-transaction', 'compute', 'no', 'Stopped', '2017-06-23 15:46:08', '', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('compute01', '172.16.60.18', 'neutron-openvswitch-agent', 'compute', 'no', 'Running', '2017-06-23 15:46:09', '25935', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('compute01', '172.16.60.18', 'openstack-nova-compute', 'compute', 'no', 'Running', '2017-06-23 15:46:09', '25914', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('compute01', '172.16.60.18', 'openvswitch-nonetwork', 'compute', 'no', 'Running', '2017-06-23 15:46:09', '25570', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('compute01', '172.16.60.18', 'qga-proxy', 'compute', 'no', 'Running', '2017-06-23 15:46:09', '25075', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('compute01', '172.16.60.18', 'stackwatch-agent', 'compute', 'no', 'Running', '2017-06-23 15:46:10', '19579', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('compute01', '172.16.60.18', 'supervisord', 'compute', 'no', 'Running', '2017-06-23 15:46:10', '11114', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('compute02', '172.16.60.19', 'libvirtd', 'compute', 'no', 'Running', '2017-06-23 15:46:10', '1358', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('compute02', '172.16.60.19', 'monitor_host_usb', 'compute', 'no', 'Running', '2017-06-23 15:46:11', '1339', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('compute02', '172.16.60.19', 'netcf-transaction', 'compute', 'no', 'Running', '2017-06-23 15:46:11', '824', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('compute02', '172.16.60.19', 'neutron-openvswitch-agent', 'compute', 'no', 'Running', '2017-06-23 15:46:11', '1344', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('compute02', '172.16.60.19', 'openstack-nova-compute', 'compute', 'no', 'Running', '2017-06-23 15:46:11', '1342', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('compute02', '172.16.60.19', 'openvswitch-nonetwork', 'compute', 'no', 'Running', '2017-06-23 15:46:12', '829', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('compute02', '172.16.60.19', 'qga-proxy', 'compute', 'no', 'Running', '2017-06-23 15:46:12', '1346', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('compute02', '172.16.60.19', 'stackwatch-agent', 'compute', 'no', 'Running', '2017-06-23 15:46:12', '1350', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('compute02', '172.16.60.19', 'supervisord', 'compute', 'no', 'Running', '2017-06-23 15:46:12', '1119', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'elasticsearch', 'controller', 'no', 'Running', '2017-06-23 15:46:13', '1437', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'etcd', 'stackwatch', 'no', 'Running', '2017-06-23 15:46:13', '16443', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'haproxy', 'controller', 'no', 'Running', '2017-06-23 15:46:13', '1364', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'httpd', 'controller', 'no', 'Running', '2017-06-23 15:46:14', 'ExecStop=/bin/kill', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'influxdb', 'stackwatch', 'no', 'Running', '2017-06-23 15:46:14', '1384', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'mariadb', 'controller', 'no', 'Running', '2017-06-23 15:46:14', '13272', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'memcached', 'controller', 'no', 'Running', '2017-06-23 15:46:15', '1383', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'monitor_host_usb', 'controller', 'no', 'Running', '2017-06-23 15:46:15', '1389', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'neocu-notification-api', 'neoCU', 'no', 'Running', '2017-06-23 15:46:15', '14776', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'neocu-notification-beat', 'neoCU', 'no', 'Running', '2017-06-23 15:46:16', '14958', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'neutron-clb-agent', 'controller', 'no', 'Error', '2017-06-23 15:46:16', '1375', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'neutron-dhcp-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:16', '1409', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'neutron-interface-monitor-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:17', '15617', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'neutron-l3-agent', 'controller', 'no', 'Stopped', '2017-06-23 15:46:17', '', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'neutron-metadata-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:18', '1361', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'neutron-metering-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:18', '1403', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'neutron-openvswitch-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:18', '1426', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'neutron-qos-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:19', '1417', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'neutron-server', 'controller', 'no', 'Running', '2017-06-23 15:46:19', '1413', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'neutron-vpn-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:19', '1370', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'openstack-cinder-api', 'controller', 'no', 'Running', '2017-06-23 15:46:20', '1395', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'openstack-cinder-scheduler', 'controller', 'no', 'Running', '2017-06-23 15:46:20', '1380', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'openstack-cinder-volume', 'controller', 'no', 'Running', '2017-06-23 15:46:20', '1386', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'openstack-cloudultra-api', 'controller', 'no', 'Running', '2017-06-23 15:46:21', '1414', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'openstack-cloudultra-scheduler', 'controller', 'no', 'Running', '2017-06-23 15:46:21', '1387', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'openstack-cloudultra-worker', 'controller', 'no', 'Running', '2017-06-23 15:46:21', '1362', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'openstack-glance-api', 'controller', 'no', 'Running', '2017-06-23 15:46:22', '1379', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'openstack-glance-registry', 'controller', 'no', 'Running', '2017-06-23 15:46:22', '23067', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'openstack-heat-api', 'controller', 'no', 'Running', '2017-06-23 15:46:23', '1366', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'openstack-heat-api-cfn', 'controller', 'no', 'Running', '2017-06-23 15:46:23', '1407', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'openstack-heat-engine', 'controller', 'no', 'Running', '2017-06-23 15:46:24', '6716', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'openstack-nova-api', 'controller', 'no', 'Running', '2017-06-23 15:46:24', '1385', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'openstack-nova-conductor', 'controller', 'no', 'Running', '2017-06-23 15:46:24', '1374', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'openstack-nova-novncproxy', 'controller', 'no', 'Running', '2017-06-23 15:46:25', '1373', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'openstack-nova-scheduler', 'controller', 'no', 'Running', '2017-06-23 15:46:25', '1382', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'openstack_log_consumer', 'controller', 'no', 'Running', '2017-06-23 15:46:25', 'ExecStop=/bin/kill', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'openvswitch', 'controller', 'no', 'Running', '2017-06-23 15:46:26', '1368', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'openvswitch-nonetwork', 'controller', 'no', 'Running', '2017-06-23 15:46:26', '811', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'pacemaker', 'controller', 'no', 'Running', '2017-06-23 15:46:26', '2041', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'rabbitmq-server', 'controller', 'no', 'Running', '2017-06-23 15:46:27', '10524', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'stackwatch-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:27', '21178', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'stackwatch-api', 'stackwatch', 'no', 'Running', '2017-06-23 15:46:27', '18101', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller01', '172.16.60.15', 'supervisord', 'controller', 'no', 'Running', '2017-06-23 15:46:28', '30617', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'elasticsearch', 'controller', 'no', 'Running', '2017-06-23 15:46:28', '25879', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'haproxy', 'controller', 'no', 'Running', '2017-06-23 15:46:29', '30544', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'httpd', 'controller', 'no', 'Running', '2017-06-23 15:46:29', 'ExecStop=/bin/kill', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'mariadb', 'controller', 'no', 'Running', '2017-06-23 15:46:29', '11367', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'memcached', 'controller', 'no', 'Running', '2017-06-23 15:46:30', '7480', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'monitor_host_usb', 'controller', 'no', 'Running', '2017-06-23 15:46:30', '18576', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'neocu-notification-api', 'neoCU', 'no', 'Running', '2017-06-23 15:46:30', '10852', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'neocu-notification-beat', 'neoCU', 'no', 'Running', '2017-06-23 15:46:31', '10976', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'neutron-clb-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:31', '25295', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'neutron-dhcp-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:31', '14296', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'neutron-interface-monitor-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:32', '16445', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'neutron-l3-agent', 'controller', 'no', 'Stopped', '2017-06-23 15:46:32', '', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'neutron-metadata-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:33', '15027', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'neutron-metering-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:33', '17219', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'neutron-openvswitch-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:33', '10707', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'neutron-qos-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:34', '17503', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'neutron-server', 'controller', 'no', 'Running', '2017-06-23 15:46:34', '26188', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'neutron-vpn-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:34', '20618', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'openstack-cinder-api', 'controller', 'no', 'Running', '2017-06-23 15:46:35', '17805', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'openstack-cinder-scheduler', 'controller', 'no', 'Running', '2017-06-23 15:46:35', '17851', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'openstack-cinder-volume', 'controller', 'no', 'Running', '2017-06-23 15:46:36', '18701', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'openstack-cloudultra-api', 'controller', 'no', 'Running', '2017-06-23 15:46:36', '14030', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'openstack-cloudultra-scheduler', 'controller', 'no', 'Running', '2017-06-23 15:46:36', '14044', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'openstack-cloudultra-worker', 'controller', 'no', 'Running', '2017-06-23 15:46:37', '14057', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'openstack-glance-api', 'controller', 'no', 'Running', '2017-06-23 15:46:37', '18814', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'openstack-glance-registry', 'controller', 'no', 'Running', '2017-06-23 15:46:38', '18144', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'openstack-heat-api', 'controller', 'no', 'Running', '2017-06-23 15:46:38', '25933', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'openstack-heat-api-cfn', 'controller', 'no', 'Running', '2017-06-23 15:46:38', '28519', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'openstack-heat-engine', 'controller', 'no', 'Running', '2017-06-23 15:46:39', '28532', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'openstack-nova-api', 'controller', 'no', 'Running', '2017-06-23 15:46:39', '25799', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'openstack-nova-conductor', 'controller', 'no', 'Running', '2017-06-23 15:46:39', '18482', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'openstack-nova-novncproxy', 'controller', 'no', 'Running', '2017-06-23 15:46:40', '18552', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'openstack-nova-scheduler', 'controller', 'no', 'Running', '2017-06-23 15:46:40', '18397', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'openstack_log_consumer', 'controller', 'no', 'Running', '2017-06-23 15:46:41', '17364', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'openvswitch', 'controller', 'no', 'Running', '2017-06-23 15:46:41', '8528', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'openvswitch-nonetwork', 'controller', 'no', 'Running', '2017-06-23 15:46:41', '8426', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'pacemaker', 'controller', 'no', 'Running', '2017-06-23 15:46:42', '10755', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'rabbitmq-server', 'controller', 'no', 'Running', '2017-06-23 15:46:42', '7633', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'stackwatch-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:42', '14217', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller02', '172.16.60.16', 'supervisord', 'controller', 'no', 'Running', '2017-06-23 15:46:43', '24070', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'elasticsearch', 'controller', 'no', 'Running', '2017-06-23 15:46:44', '20424', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'haproxy', 'controller', 'no', 'Running', '2017-06-23 15:46:44', '25487', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'httpd', 'controller', 'no', 'Running', '2017-06-23 15:46:44', 'ExecStop=/bin/kill', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'mariadb', 'controller', 'no', 'Running', '2017-06-23 15:46:45', '10979', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'memcached', 'controller', 'no', 'Running', '2017-06-23 15:46:45', '2056', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'monitor_host_usb', 'controller', 'no', 'Running', '2017-06-23 15:46:45', '13527', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'neocu-notification-api', 'neoCU', 'no', 'Running', '2017-06-23 15:46:46', '27523', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'neocu-notification-beat', 'neoCU', 'no', 'Running', '2017-06-23 15:46:46', '27689', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'neutron-clb-agent', 'controller', 'no', 'Error', '2017-06-23 15:46:46', '11376', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'neutron-dhcp-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:47', '9240', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'neutron-interface-monitor-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:47', '11406', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'neutron-l3-agent', 'controller', 'no', 'Stopped', '2017-06-23 15:46:47', '', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'neutron-metadata-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:48', '9968', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'neutron-metering-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:48', '12514', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'neutron-openvswitch-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:49', '5955', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'neutron-qos-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:49', '12786', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'neutron-server', 'controller', 'no', 'Running', '2017-06-23 15:46:49', '20876', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'neutron-vpn-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:50', '15918', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'openstack-cinder-api', 'controller', 'no', 'Running', '2017-06-23 15:46:50', '12903', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'openstack-cinder-scheduler', 'controller', 'no', 'Running', '2017-06-23 15:46:50', '12940', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'openstack-cinder-volume', 'controller', 'no', 'Running', '2017-06-23 15:46:51', '13826', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'openstack-cloudultra-api', 'controller', 'no', 'Running', '2017-06-23 15:46:51', '8319', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'openstack-cloudultra-scheduler', 'controller', 'no', 'Running', '2017-06-23 15:46:51', '8332', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'openstack-cloudultra-worker', 'controller', 'no', 'Running', '2017-06-23 15:46:52', '8345', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'openstack-glance-api', 'controller', 'no', 'Running', '2017-06-23 15:46:52', '13764', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'openstack-glance-registry', 'controller', 'no', 'Running', '2017-06-23 15:46:52', '4822', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'openstack-heat-api', 'controller', 'no', 'Running', '2017-06-23 15:46:53', '20545', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'openstack-heat-api-cfn', 'controller', 'no', 'Running', '2017-06-23 15:46:53', '23715', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'openstack-heat-engine', 'controller', 'no', 'Running', '2017-06-23 15:46:54', '23728', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'openstack-nova-api', 'controller', 'no', 'Running', '2017-06-23 15:46:54', '20368', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'openstack-nova-conductor', 'controller', 'no', 'Running', '2017-06-23 15:46:54', '13415', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'openstack-nova-novncproxy', 'controller', 'no', 'Running', '2017-06-23 15:46:55', '13503', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'openstack-nova-scheduler', 'controller', 'no', 'Running', '2017-06-23 15:46:55', '13347', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'openstack_log_consumer', 'controller', 'no', 'Running', '2017-06-23 15:46:55', 'ExecStop=/bin/kill', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'openvswitch', 'controller', 'no', 'Running', '2017-06-23 15:46:56', '3798', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'openvswitch-nonetwork', 'controller', 'no', 'Running', '2017-06-23 15:46:56', '3696', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'pacemaker', 'controller', 'no', 'Running', '2017-06-23 15:46:56', '5975', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'rabbitmq-server', 'controller', 'no', 'Running', '2017-06-23 15:46:57', '10139', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'stackwatch-agent', 'controller', 'no', 'Running', '2017-06-23 15:46:57', '7393', '', null, 'normal');
-INSERT INTO `serviceStatus` VALUES ('controller03', '172.16.60.17', 'supervisord', 'controller', 'no', 'Running', '2017-06-23 15:46:57', '16666', '', null, 'normal');
+INSERT INTO `serviceStatus` VALUES ('compute01', '10.0.20.11', 'libvirtd', 'compute', 'no', 'Running', '2017-08-04 19:26:44', '2139', '', null, 'normal', 'libvirt-daemon-1.2.17-13.el7_2.5.x86_64');
+INSERT INTO `serviceStatus` VALUES ('compute01', '10.0.20.11', 'monitor_host_usb', 'compute', 'no', 'Running', '2017-08-04 19:26:45', '2133', '', null, 'normal', 'monitor-host-usb-0.1-mitaka.noarch');
+INSERT INTO `serviceStatus` VALUES ('compute01', '10.0.20.11', 'netcf-transaction', 'compute', 'no', 'Running', '2017-08-04 19:26:46', '1243', '', null, 'normal', 'netcf-libs-0.2.8-1.el7.x86_64');
+INSERT INTO `serviceStatus` VALUES ('compute01', '10.0.20.11', 'neutron-openvswitch-agent', 'compute', 'no', 'Running', '2017-08-04 19:26:46', '2123', '', null, 'normal', 'openstack-neutron-openvswitch-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('compute01', '10.0.20.11', 'openstack-nova-compute', 'compute', 'no', 'Running', '2017-08-04 19:26:47', '2125', '', null, 'normal', 'openstack-nova-compute-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('compute01', '10.0.20.11', 'openvswitch-nonetwork', 'compute', 'no', 'Running', '2017-08-04 19:26:47', '1156', '', null, 'normal', 'openvswitch-2.6.1.1-1.x86_64');
+INSERT INTO `serviceStatus` VALUES ('compute01', '10.0.20.11', 'qga-proxy', 'compute', 'no', 'Running', '2017-08-04 19:26:48', '2129', '', null, 'normal', 'qga-proxy-0.1-mitaka.noarch');
+INSERT INTO `serviceStatus` VALUES ('compute01', '10.0.20.11', 'stackwatch-agent', 'compute', 'no', 'Running', '2017-08-04 19:26:48', '28244', '', null, 'normal', 'stackwatch-agent-2017.2.golang-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('compute01', '10.0.20.11', 'supervisord', 'compute', 'no', 'Running', '2017-08-04 19:26:49', '1448', '', null, 'normal', 'supervisor-3.1.3-3.el7.noarch');
+INSERT INTO `serviceStatus` VALUES ('compute02', '10.0.20.12', 'libvirtd', 'compute', 'no', 'Running', '2017-08-04 19:26:49', '17192', '', null, 'normal', 'libvirt-daemon-1.2.17-13.el7_2.5.x86_64');
+INSERT INTO `serviceStatus` VALUES ('compute02', '10.0.20.12', 'monitor_host_usb', 'compute', 'no', 'Running', '2017-08-04 19:26:50', '17562', '', null, 'normal', 'monitor-host-usb-0.1-mitaka.noarch');
+INSERT INTO `serviceStatus` VALUES ('compute02', '10.0.20.12', 'netcf-transaction', 'compute', 'no', 'Stopped', '2017-08-04 19:26:50', '', '', null, 'normal', 'netcf-libs-0.2.8-1.el7.x86_64');
+INSERT INTO `serviceStatus` VALUES ('compute02', '10.0.20.12', 'neutron-openvswitch-agent', 'compute', 'no', 'Running', '2017-08-04 19:26:51', '14463', '', null, 'normal', 'openstack-neutron-openvswitch-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('compute02', '10.0.20.12', 'openstack-nova-compute', 'compute', 'no', 'Running', '2017-08-04 19:26:52', '14630', '', null, 'normal', 'openstack-nova-compute-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('compute02', '10.0.20.12', 'openvswitch-nonetwork', 'compute', 'no', 'Running', '2017-08-04 19:26:52', '19188', '', null, 'normal', 'openvswitch-2.6.1.1-1.x86_64');
+INSERT INTO `serviceStatus` VALUES ('compute02', '10.0.20.12', 'qga-proxy', 'compute', 'no', 'Running', '2017-08-04 19:26:53', '17505', '', null, 'normal', 'qga-proxy-0.1-mitaka.noarch');
+INSERT INTO `serviceStatus` VALUES ('compute02', '10.0.20.12', 'stackwatch-agent', 'compute', 'no', 'Running', '2017-08-04 19:26:53', '23146', '', null, 'normal', 'stackwatch-agent-2017.2.golang-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('compute02', '10.0.20.12', 'supervisord', 'compute', 'no', 'Running', '2017-08-04 19:26:54', '23839', '', null, 'normal', 'supervisor-3.1.3-3.el7.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'elasticsearch', 'controller', 'no', 'Running', '2017-08-04 19:26:54', '4105', '', null, 'normal', 'elasticsearch-2.4.2-1.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'etcd', 'stackwatch', 'no', 'Running', '2017-08-04 19:26:55', '13976', '', null, 'normal', 'etcd-2.3.7-2.el7.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'haproxy', 'controller', 'no', 'Running', '2017-08-04 19:26:56', '17518', '', null, 'normal', 'haproxy-1.5.14-3.el7.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'httpd', 'controller', 'no', 'Running', '2017-08-04 19:26:56', '13266', '', null, 'normal', 'httpd-2.4.6-40.el7.centos.4.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'influxdb', 'stackwatch', 'no', 'Running', '2017-08-04 19:26:57', '15123', '', null, 'normal', 'file /lib/systemd/system/influxdb.service is not owned by any package');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'mariadb', 'controller', 'no', 'Running', '2017-08-04 19:26:58', '11708', '', null, 'normal', 'mariadb-server-10.1.12-4.el7.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'memcached', 'controller', 'no', 'Running', '2017-08-04 19:26:58', '10294', '', null, 'normal', 'memcached-1.4.25-1.el7.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'monitor_host_usb', 'controller', 'no', 'Running', '2017-08-04 19:26:59', '25081', '', null, 'normal', 'monitor-host-usb-0.1-mitaka.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'neocu-notification-api', 'neoCU', 'no', 'Running', '2017-08-04 19:27:00', '23446', '', null, 'normal', 'neocu_notification_service-2.0.24-72.ee4798d.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'neocu-notification-beat', 'neoCU', 'no', 'Running', '2017-08-04 19:27:00', '26165', '', null, 'normal', 'neocu_notification_service-2.0.24-72.ee4798d.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'neutron-clb-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:01', '32664', '', null, 'normal', 'openstack-neutron-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'neutron-dhcp-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:01', '32133', '', null, 'normal', 'openstack-neutron-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'neutron-interface-monitor-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:02', '32257', '', null, 'normal', 'openstack-neutron-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'neutron-l3-agent', 'controller', 'no', 'Stopped', '2017-08-04 19:27:03', '', '', null, 'normal', 'openstack-neutron-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'neutron-metadata-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:03', '31615', '', null, 'normal', 'openstack-neutron-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'neutron-metering-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:04', '33150', '', null, 'normal', 'openstack-neutron-metering-agent-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'neutron-openvswitch-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:05', '31685', '', null, 'normal', 'openstack-neutron-openvswitch-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'neutron-qos-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:05', '32485', '', null, 'normal', 'openstack-neutron-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'neutron-server', 'controller', 'no', 'Running', '2017-08-04 19:27:06', '32668', '', null, 'normal', 'openstack-neutron-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'neutron-vpn-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:06', '32469', '', null, 'normal', 'openstack-neutron-vpnaas-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'openstack-cinder-api', 'controller', 'no', 'Running', '2017-08-04 19:27:07', '31499', '', null, 'normal', 'openstack-cinder-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'openstack-cinder-scheduler', 'controller', 'no', 'Running', '2017-08-04 19:27:08', '32440', '', null, 'normal', 'openstack-cinder-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'openstack-cinder-volume', 'controller', 'no', 'Running', '2017-08-04 19:27:08', '31495', '', null, 'normal', 'openstack-cinder-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'openstack-cloudultra-api', 'controller', 'no', 'Running', '2017-08-04 19:27:09', '31475', '', null, 'normal', 'openstack-cloudultra-1.3.5.dev4-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'openstack-cloudultra-scheduler', 'controller', 'no', 'Running', '2017-08-04 19:27:10', '31471', '', null, 'normal', 'openstack-cloudultra-1.3.5.dev4-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'openstack-cloudultra-worker', 'controller', 'no', 'Running', '2017-08-04 19:27:10', '31483', '', null, 'normal', 'openstack-cloudultra-1.3.5.dev4-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'openstack-glance-api', 'controller', 'no', 'Running', '2017-08-04 19:27:11', '31503', '', null, 'normal', 'openstack-glance-2017.5.16-0.2.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'openstack-glance-registry', 'controller', 'no', 'Running', '2017-08-04 19:27:12', '31489', '', null, 'normal', 'openstack-glance-2017.5.16-0.2.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'openstack-heat-api', 'controller', 'no', 'Running', '2017-08-04 19:27:12', '31473', '', null, 'normal', 'openstack-heat-api-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'openstack-heat-api-cfn', 'controller', 'no', 'Running', '2017-08-04 19:27:13', '31455', '', null, 'normal', 'openstack-heat-api-cfn-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'openstack-heat-engine', 'controller', 'no', 'Running', '2017-08-04 19:27:13', '32134', '', null, 'normal', 'openstack-heat-engine-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'openstack-nova-api', 'controller', 'no', 'Running', '2017-08-04 19:27:14', '31540', '', null, 'normal', 'openstack-nova-api-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'openstack-nova-conductor', 'controller', 'no', 'Running', '2017-08-04 19:27:15', '31497', '', null, 'normal', 'openstack-nova-conductor-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'openstack-nova-novncproxy', 'controller', 'no', 'Running', '2017-08-04 19:27:15', '31507', '', null, 'normal', 'openstack-nova-novncproxy-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'openstack-nova-scheduler', 'controller', 'no', 'Running', '2017-08-04 19:27:16', '31817', '', null, 'normal', 'openstack-nova-scheduler-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'openstack_log_consumer', 'controller', 'no', 'Running', '2017-08-04 19:27:17', '31464', '', null, 'normal', 'openstack_log_consumer-1.0.3-1.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'openvswitch', 'controller', 'no', 'Running', '2017-08-04 19:27:17', '9557', '', null, 'normal', 'openvswitch-2.6.1.1-1.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'openvswitch-nonetwork', 'controller', 'no', 'Running', '2017-08-04 19:27:18', '9367', '', null, 'normal', 'openvswitch-2.6.1.1-1.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'pacemaker', 'controller', 'no', 'Running', '2017-08-04 19:27:19', '19196', '', null, 'normal', 'pacemaker-1.1.13-10.el7_2.4.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'rabbitmq-server', 'controller', 'no', 'Running', '2017-08-04 19:27:19', '13829', '', null, 'normal', 'rabbitmq-server-3.6.5-1.el7.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'stackwatch-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:20', '17811', '', null, 'normal', 'stackwatch-agent-2017.2.golang-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'stackwatch-api', 'stackwatch', 'no', 'Running', '2017-08-04 19:27:21', '15959', '', null, 'normal', 'stackwatch-api-2017.2.golang-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller01', '10.0.20.1', 'supervisord', 'controller', 'no', 'Running', '2017-08-04 19:27:21', '19928', '', null, 'normal', 'supervisor-3.1.3-3.el7.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'elasticsearch', 'controller', 'no', 'Running', '2017-08-04 19:27:22', '29240', '', null, 'normal', 'elasticsearch-2.4.2-1.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'haproxy', 'controller', 'no', 'Running', '2017-08-04 19:27:22', '16144', '', null, 'normal', 'haproxy-1.5.14-3.el7.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'httpd', 'controller', 'no', 'Running', '2017-08-04 19:27:23', '18422', '', null, 'normal', 'httpd-2.4.6-40.el7.centos.4.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'mariadb', 'controller', 'no', 'Running', '2017-08-04 19:27:24', '11192', '', null, 'normal', 'mariadb-server-10.1.12-4.el7.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'memcached', 'controller', 'no', 'Running', '2017-08-04 19:27:24', '34619', '', null, 'normal', 'memcached-1.4.25-1.el7.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'monitor_host_usb', 'controller', 'no', 'Running', '2017-08-04 19:27:25', '16293', '', null, 'normal', 'monitor-host-usb-0.1-mitaka.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'neocu-notification-api', 'neoCU', 'no', 'Running', '2017-08-04 19:27:26', '28366', '', null, 'normal', 'neocu_notification_service-2.0.24-72.ee4798d.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'neocu-notification-beat', 'neoCU', 'no', 'Running', '2017-08-04 19:27:26', '4419', '', null, 'normal', 'neocu_notification_service-2.0.24-72.ee4798d.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'neutron-clb-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:27', '13030', '', null, 'normal', 'openstack-neutron-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'neutron-dhcp-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:28', '12558', '', null, 'normal', 'openstack-neutron-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'neutron-interface-monitor-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:28', '12633', '', null, 'normal', 'openstack-neutron-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'neutron-l3-agent', 'controller', 'no', 'Stopped', '2017-08-04 19:27:29', '', '', null, 'normal', 'openstack-neutron-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'neutron-metadata-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:30', '11949', '', null, 'normal', 'openstack-neutron-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'neutron-metering-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:30', '12874', '', null, 'normal', 'openstack-neutron-metering-agent-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'neutron-openvswitch-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:31', '12194', '', null, 'normal', 'openstack-neutron-openvswitch-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'neutron-qos-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:32', '12974', '', null, 'normal', 'openstack-neutron-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'neutron-server', 'controller', 'no', 'Running', '2017-08-04 19:27:32', '12840', '', null, 'normal', 'openstack-neutron-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'neutron-vpn-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:33', '12942', '', null, 'normal', 'openstack-neutron-vpnaas-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'openstack-cinder-api', 'controller', 'no', 'Running', '2017-08-04 19:27:33', '11947', '', null, 'normal', 'openstack-cinder-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'openstack-cinder-scheduler', 'controller', 'no', 'Running', '2017-08-04 19:27:34', '14539', '', null, 'normal', 'openstack-cinder-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'openstack-cinder-volume', 'controller', 'no', 'Running', '2017-08-04 19:27:35', '11978', '', null, 'normal', 'openstack-cinder-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'openstack-cloudultra-api', 'controller', 'no', 'Running', '2017-08-04 19:27:35', '11929', '', null, 'normal', 'openstack-cloudultra-1.3.5.dev4-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'openstack-cloudultra-scheduler', 'controller', 'no', 'Running', '2017-08-04 19:27:36', '11922', '', null, 'normal', 'openstack-cloudultra-1.3.5.dev4-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'openstack-cloudultra-worker', 'controller', 'no', 'Running', '2017-08-04 19:27:37', '11941', '', null, 'normal', 'openstack-cloudultra-1.3.5.dev4-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'openstack-glance-api', 'controller', 'no', 'Running', '2017-08-04 19:27:37', '11977', '', null, 'normal', 'openstack-glance-2017.5.16-0.2.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'openstack-glance-registry', 'controller', 'no', 'Running', '2017-08-04 19:27:38', '11971', '', null, 'normal', 'openstack-glance-2017.5.16-0.2.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'openstack-heat-api', 'controller', 'no', 'Running', '2017-08-04 19:27:39', '11933', '', null, 'normal', 'openstack-heat-api-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'openstack-heat-api-cfn', 'controller', 'no', 'Running', '2017-08-04 19:27:39', '11912', '', null, 'normal', 'openstack-heat-api-cfn-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'openstack-heat-engine', 'controller', 'no', 'Running', '2017-08-04 19:27:40', '13219', '', null, 'normal', 'openstack-heat-engine-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'openstack-nova-api', 'controller', 'no', 'Running', '2017-08-04 19:27:41', '12043', '', null, 'normal', 'openstack-nova-api-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'openstack-nova-conductor', 'controller', 'no', 'Running', '2017-08-04 19:27:41', '11985', '', null, 'normal', 'openstack-nova-conductor-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'openstack-nova-novncproxy', 'controller', 'no', 'Running', '2017-08-04 19:27:42', '11931', '', null, 'normal', 'openstack-nova-novncproxy-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'openstack-nova-scheduler', 'controller', 'no', 'Running', '2017-08-04 19:27:42', '13052', '', null, 'normal', 'openstack-nova-scheduler-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'openstack_log_consumer', 'controller', 'no', 'Running', '2017-08-04 19:27:43', '11927', '', null, 'normal', 'openstack_log_consumer-1.0.3-1.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'openvswitch', 'controller', 'no', 'Running', '2017-08-04 19:27:44', '37866', '', null, 'normal', 'openvswitch-2.6.1.1-1.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'openvswitch-nonetwork', 'controller', 'no', 'Running', '2017-08-04 19:27:44', '37635', '', null, 'normal', 'openvswitch-2.6.1.1-1.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'pacemaker', 'controller', 'no', 'Running', '2017-08-04 19:27:45', '17585', '', null, 'normal', 'pacemaker-1.1.13-10.el7_2.4.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'rabbitmq-server', 'controller', 'no', 'Running', '2017-08-04 19:27:46', '13394', '', null, 'normal', 'rabbitmq-server-3.6.5-1.el7.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'stackwatch-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:46', '38765', '', null, 'normal', 'stackwatch-agent-2017.2.golang-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller02', '10.0.20.2', 'supervisord', 'controller', 'no', 'Running', '2017-08-04 19:27:47', '40501', '', null, 'normal', 'supervisor-3.1.3-3.el7.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'elasticsearch', 'controller', 'no', 'Running', '2017-08-04 19:27:48', '28814', '', null, 'normal', 'elasticsearch-2.4.2-1.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'haproxy', 'controller', 'no', 'Running', '2017-08-04 19:27:48', '16153', '', null, 'normal', 'haproxy-1.5.14-3.el7.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'httpd', 'controller', 'no', 'Running', '2017-08-04 19:27:49', '11879', '', null, 'normal', 'httpd-2.4.6-40.el7.centos.4.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'mariadb', 'controller', 'no', 'Running', '2017-08-04 19:27:49', '11195', '', null, 'normal', 'mariadb-server-10.1.12-4.el7.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'memcached', 'controller', 'no', 'Running', '2017-08-04 19:27:50', '34192', '', null, 'normal', 'memcached-1.4.25-1.el7.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'monitor_host_usb', 'controller', 'no', 'Running', '2017-08-04 19:27:51', '16232', '', null, 'normal', 'monitor-host-usb-0.1-mitaka.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'neocu-notification-api', 'neoCU', 'no', 'Running', '2017-08-04 19:27:51', '27763', '', null, 'normal', 'neocu_notification_service-2.0.24-72.ee4798d.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'neocu-notification-beat', 'neoCU', 'no', 'Running', '2017-08-04 19:27:52', '3961', '', null, 'normal', 'neocu_notification_service-2.0.24-72.ee4798d.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'neutron-clb-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:52', '18114', '', null, 'normal', 'openstack-neutron-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'neutron-dhcp-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:53', '17214', '', null, 'normal', 'openstack-neutron-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'neutron-interface-monitor-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:54', '17330', '', null, 'normal', 'openstack-neutron-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'neutron-l3-agent', 'controller', 'no', 'Stopped', '2017-08-04 19:27:54', '', '', null, 'normal', 'openstack-neutron-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'neutron-metadata-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:55', '16775', '', null, 'normal', 'openstack-neutron-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'neutron-metering-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:56', '17566', '', null, 'normal', 'openstack-neutron-metering-agent-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'neutron-openvswitch-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:56', '16945', '', null, 'normal', 'openstack-neutron-openvswitch-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'neutron-qos-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:57', '17510', '', null, 'normal', 'openstack-neutron-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'neutron-server', 'controller', 'no', 'Running', '2017-08-04 19:27:58', '17772', '', null, 'normal', 'openstack-neutron-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'neutron-vpn-agent', 'controller', 'no', 'Running', '2017-08-04 19:27:58', '17528', '', null, 'normal', 'openstack-neutron-vpnaas-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'openstack-cinder-api', 'controller', 'no', 'Running', '2017-08-04 19:27:59', '16735', '', null, 'normal', 'openstack-cinder-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'openstack-cinder-scheduler', 'controller', 'no', 'Running', '2017-08-04 19:28:00', '17708', '', null, 'normal', 'openstack-cinder-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'openstack-cinder-volume', 'controller', 'no', 'Running', '2017-08-04 19:28:00', '16749', '', null, 'normal', 'openstack-cinder-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'openstack-cloudultra-api', 'controller', 'no', 'Running', '2017-08-04 19:28:01', '16719', '', null, 'normal', 'openstack-cloudultra-1.3.5.dev4-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'openstack-cloudultra-scheduler', 'controller', 'no', 'Running', '2017-08-04 19:28:02', '16709', '', null, 'normal', 'openstack-cloudultra-1.3.5.dev4-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'openstack-cloudultra-worker', 'controller', 'no', 'Running', '2017-08-04 19:28:02', '16711', '', null, 'normal', 'openstack-cloudultra-1.3.5.dev4-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'openstack-glance-api', 'controller', 'no', 'Running', '2017-08-04 19:28:03', '16752', '', null, 'normal', 'openstack-glance-2017.5.16-0.2.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'openstack-glance-registry', 'controller', 'no', 'Running', '2017-08-04 19:28:04', '16753', '', null, 'normal', 'openstack-glance-2017.5.16-0.2.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'openstack-heat-api', 'controller', 'no', 'Running', '2017-08-04 19:28:04', '16732', '', null, 'normal', 'openstack-heat-api-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'openstack-heat-api-cfn', 'controller', 'no', 'Running', '2017-08-04 19:28:05', '16695', '', null, 'normal', 'openstack-heat-api-cfn-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'openstack-heat-engine', 'controller', 'no', 'Running', '2017-08-04 19:28:06', '18000', '', null, 'normal', 'openstack-heat-engine-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'openstack-nova-api', 'controller', 'no', 'Running', '2017-08-04 19:28:06', '16832', '', null, 'normal', 'openstack-nova-api-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'openstack-nova-conductor', 'controller', 'no', 'Running', '2017-08-04 19:28:07', '16756', '', null, 'normal', 'openstack-nova-conductor-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'openstack-nova-novncproxy', 'controller', 'no', 'Running', '2017-08-04 19:28:07', '16730', '', null, 'normal', 'openstack-nova-novncproxy-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'openstack-nova-scheduler', 'controller', 'no', 'Running', '2017-08-04 19:28:08', '17803', '', null, 'normal', 'openstack-nova-scheduler-2017.5.16-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'openstack_log_consumer', 'controller', 'no', 'Running', '2017-08-04 19:28:09', '16706', '', null, 'normal', 'openstack_log_consumer-1.0.3-1.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'openvswitch', 'controller', 'no', 'Running', '2017-08-04 19:28:09', '37769', '', null, 'normal', 'openvswitch-2.6.1.1-1.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'openvswitch-nonetwork', 'controller', 'no', 'Running', '2017-08-04 19:28:10', '37539', '', null, 'normal', 'openvswitch-2.6.1.1-1.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'pacemaker', 'controller', 'no', 'Running', '2017-08-04 19:28:11', '17600', '', null, 'normal', 'pacemaker-1.1.13-10.el7_2.4.x86_64');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'rabbitmq-server', 'controller', 'no', 'Running', '2017-08-04 19:28:11', '13404', '', null, 'normal', 'rabbitmq-server-3.6.5-1.el7.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'stackwatch-agent', 'controller', 'no', 'Running', '2017-08-04 19:28:12', '38304', '', null, 'normal', 'stackwatch-agent-2017.2.golang-1.el7.centos.noarch');
+INSERT INTO `serviceStatus` VALUES ('controller03', '10.0.20.3', 'supervisord', 'controller', 'no', 'Running', '2017-08-04 19:28:13', '40021', '', null, 'normal', 'supervisor-3.1.3-3.el7.noarch');
 
 -- ----------------------------
 -- Table structure for `serviceStatusHistory`
@@ -453,9 +454,9 @@ DELIMITER ;;
 CREATE DEFINER=`hiiservice`@`%` PROCEDURE `updateHostServiceStatus`(in hIP VARCHAR(200),
 	in hService VARCHAR(200),
 	IN sStatus varchar(200),
-	in cTime VARCHAR(200), in spid VARCHAR(200), in suggestion VARCHAR(200))
+	in cTime VARCHAR(200), in spid VARCHAR(200), in suggestion VARCHAR(200), in packagInfo VARCHAR(200))
 BEGIN
-	update serviceStatus set status=sStatus,checkTime=cTime,pid=spid,abnormalAdvice=suggestion where hostIP=hIP and serviceName=hService ;
+	update serviceStatus set status=sStatus,checkTime=cTime,pid=spid,abnormalAdvice=suggestion,packageVersion=packagInfo where hostIP=hIP and serviceName=hService ;
 end
 ;;
 DELIMITER ;

@@ -40,9 +40,9 @@ conn= MySQLdb.connect(
 cur = conn.cursor()
 #-----------------------------------------------------------------------------
 #update service status to database
-def updateMysqRecord(hostIP,sName,sStatus,pid,suggestion):
+def updateMysqRecord(hostIP,sName,sStatus,pid,suggestion,version):
 	timeNow =  time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
-	strcmd = "call updateHostServiceStatus('"+hostIP+"','"+sName+"','"+sStatus+"','"+timeNow+"','"+ pid +"','"+suggestion+"')"
+	strcmd = "call updateHostServiceStatus('"+hostIP+"','"+sName+"','"+sStatus+"','"+timeNow+"','"+ pid +"','"+suggestion+"','"+version+"')"
 	#print strcmd
 	result = cur.execute(strcmd)
 	conn.commit()
@@ -70,12 +70,23 @@ def getServicePID(hostIP,sName):
 	try:
 		data = urllib2.urlopen(url,timeout=1)
 		result = data.readlines()
-		servicePID = result[8].replace("\n","")
+		servicePID = result[27].replace("\n","")
 		return servicePID
 	except Exception,e:
 		#print Exception,":",e
 		return 'Unknown'
 #-----------------------------------------------------------------------------
+def getServiceVersion(hostIP,sName):
+	url = "http://"+ hostIP +"/cgi-bin/serviceStatusApi.py?serviceName="+sName
+	#url ='http://172.16.41.65/cgi-bin/serviceStatusApi.py?serviceName=sshd'
+	try:
+		data = urllib2.urlopen(url,timeout=1)
+		result = data.readlines()
+		packageVersion = result[8].replace("\n","")
+		return packageVersion
+	except Exception,e:
+		#print Exception,":",e
+		return 'Unknown'
 
 #-----------------------------------------------------------------------------
 def hoststatus(hostip):
@@ -117,12 +128,13 @@ for record in records:
 	sname = record[2]
 	status = updateServiceStatus(ip,sname)
 	pid = getServicePID(ip,sname)
+	version = getServiceVersion(ip,sname)
 	suggestion = ""
 	if status == "argsArray = cgi.FieldStorage()" :
 		status = "Unknown"
 		suggestion = "Http config Error"
 	
-	updateMysqRecord(ip,sname,status,pid,suggestion)	
+	updateMysqRecord(ip,sname,status,pid,suggestion,version)	
  
 #-----------------------------------------------------------------------------
 #updateServiceStatus('127.0.0.1','sshd')
@@ -133,6 +145,7 @@ cur.close()
 print "<p>finished service checking</p>"
 timeNow =  time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
 print "<p>Finished At: "+timeNow + "</p>"
+
 
 
 

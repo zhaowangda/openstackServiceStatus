@@ -16,6 +16,8 @@ command4 = " uptime "
 command5 = "df -h |grep /dev/mapper/centos-root |awk '{print " + '"allSpace:"$2  "  used:"$3 " usageRate:"$5  }'+"'"
 command6 = "free -h |grep Mem | awk '{ print "+ ' "allSpace:" $2   "  used:"$3 }'+"'"
 command7 = "ps -ef |wc -l "
+
+commandVersion = "rpm -qf /lib/systemd/system/"+ serviceName +".service "
 #print command1
 #print command2
 #---------------------------------------------------------------
@@ -47,6 +49,10 @@ else :
         #--------------------------
         result = os.popen(command7)
         proccessInfo =  result.readline()
+
+        #--------------------------
+        versionResult = os.popen(commandVersion)
+        version = versionResult.readline()
         #-------------------------
         if "inactive" in resultData:
                 status = "Stopped"
@@ -81,9 +87,15 @@ print('<status>')
 print status
 print('</status>')
 
-print('<pid>')
-print servicePID
-print('</pid>')
+#print('status:')
+print('<version>')
+print version
+print('</version>')
+#print ('<br />')
+#
+
+
+
 
 print('<sysuptime>')
 print uptime
@@ -103,9 +115,13 @@ print proccessInfo
 print('</proccessInfo>')
 
 
+print('<pid>')
+print servicePID
+print('</pid>')
 
 print('</result>')
 #----------------------------------------------------------
 #print('</body>')  
 #print('</html>') 
+
 
